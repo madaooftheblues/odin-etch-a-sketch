@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 400px;
+  width: 400px;
+  background-color: pink;
+  display: grid;
+}
+
+.square {
+  background-color: beige;
+}
