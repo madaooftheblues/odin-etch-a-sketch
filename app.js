@@ -1,24 +1,29 @@
-const container = document.querySelector(".container");
+const canvas = document.querySelector(".canvas");
+const colorWell = document.querySelector("#colorWell");
+
+let color = "black";
 
 function grid(n) {
-  container.style.gridTemplateColumns = `repeat(${n},1fr)`;
+  canvas.style.gridTemplateColumns = `repeat(${n},1fr)`;
   for (let i = 0; i < n * n; i++) {
     const square = document.createElement("div");
     square.classList.add("square");
-    container.appendChild(square);
+    canvas.appendChild(square);
   }
 }
 
 function etch(e) {
-  e.target.style.backgroundColor = "black";
+  return (e.target.style.backgroundColor = color);
 }
 
-container.addEventListener("mousedown", (e) =>
-  container.addEventListener("mouseover", etch)
+colorWell.addEventListener("input", (e) => (color = e.target.value));
+canvas.addEventListener("mousedown", etch);
+canvas.addEventListener("mousedown", () =>
+  canvas.addEventListener("mouseover", etch)
 );
 
-container.addEventListener("mouseup", (e) =>
-  container.removeEventListener("mouseover", etch)
+canvas.addEventListener("mouseup", () =>
+  canvas.removeEventListener("mouseover", etch)
 );
 
-grid(16);
+grid(64);
