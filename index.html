@@ -4,17 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Aladin&display=swap");
+    </style>
     <link rel="stylesheet" href="./styles.css" />
     <script src="./app.js" defer></script>
     <title>Etch-A-Sketch</title>
   </head>
   <body>
-    <h1>Etch A Sketch</h1>
+    <h1>Etch-A-Sketch</h1>
     <div class="container">
       <div class="toolkit">
         <input type="color" name="color-picker" id="colorWell" />
+        <button id="eraser">Erase!</button>
+        <div class="slider-container">
+          <input
+            type="range"
+            name="pixels"
+            id="slider"
+            min="1"
+            max="100"
+            value="16"
+          />
+          <h3 id="pixels">16 x 16</h3>
+        </div>
+        <button id="random">Random</button>
+        <button id="clear">Clear</button>
       </div>
-      <div class="canvas"></div>
+      <div class="canvas" draggable="false"></div>
     </div>
   </body>
 </html>
