@@ -69,7 +69,7 @@ eraser.addEventListener("click", () => {
 });
 
 clear.addEventListener("click", () => {
-  const squares = canvas.querySelectorAll("div");
+  const squares = canvas.querySelectorAll(".square");
   squares.forEach((square) => (square.style.backgroundColor = CANVAS_COLOR));
 });
 

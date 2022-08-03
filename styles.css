@@ -45,12 +45,8 @@ button {
   border: 1px solid rgba(220, 175, 150, 0.5);
 }
 
-.clicked {
-  background-color: white;
-}
-
 .square:hover {
-  background-color: #dcae96;
+  background-color: #dcae96 !important;
 }
 
 .toolkit {
