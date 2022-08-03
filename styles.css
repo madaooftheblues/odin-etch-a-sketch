@@ -26,14 +26,6 @@ button {
   font-size: 16px;
 }
 
-.selected,
-button:hover,
-#colorWell:hover,
-#slider:hover {
-  transform: scale(1.1);
-  box-shadow: rgba(220, 175, 150, 0.12) 0px 2px 4px 0px,
-    rgba(220, 175, 150, 0.32) 0px 2px 16px 0px;
-}
 .container {
   display: flex;
 }
@@ -102,4 +94,13 @@ button:hover,
   height: 25px;
   border-radius: 50%;
   cursor: pointer;
+}
+
+.selected,
+button:hover,
+#colorWell:hover,
+#slider:hover {
+  transform: scale(1.1);
+  box-shadow: rgba(220, 175, 150, 0.12) 0px 2px 4px 0px,
+    rgba(220, 175, 150, 0.32) 0px 2px 16px 0px;
 }
